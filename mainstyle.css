@@ -1,0 +1,385 @@
+@charset "utf-8";
+
+/* ========================================
+    リセットcss
+========================================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-style:normal;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+html{overflow-y: scroll;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+input, textarea,{margin: 0; padding: 0;}
+ol, ul{list-style:none;}
+table{border-collapse: collapse; border-spacing:0;}
+caption, th{text-align: left;}
+a:focus {outline:none;}
+
+/* micro clearfix */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {clear: both;}
+.cf {*zoom: 1;}
+
+body{
+  background: url(images/FreshMilk.png);
+}
+
+/*ヘッダー*/
+
+header{
+  background-color: #ffefe0;
+  height:120px;
+  width:100%;
+  padding-top:25px;
+  font-family: 'Raleway', sans-serif;
+}
+
+div#header_inner {
+  width: 1200px;
+  height:100px;
+  background-color:#fff7ef;
+  margin:0 auto;
+}
+
+header h1{
+  float:left;
+  margin-left:90px;
+}
+
+
+
+div.toplogo{
+  float:left;
+  padding:20px 0;
+  margin:0 auto;
+}
+
+div.toplogo p#toplogo{
+  font-size:50px;
+  color: #854334;
+}
+
+div.toplogo p#subsentence{
+  font-size:15px;
+}
+
+header nav{
+  float:right;
+  margin-left:30px;
+  padding-top:56px;
+  width:600px;
+}
+
+header nav ul {
+  list-style: none;
+  margin-left: 80px;
+}
+
+header nav ul li{
+   border-left: 1px solid #7f7fff;
+   padding:0px 10px;
+   float:left;
+}
+
+nav ul li:last-child {
+    border-right: 1px solid #7f7fff;
+    padding-right: 20px;
+}
+
+header nav ul li a{
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+header nav ul li:hover{
+  opacity: 0.5;
+}
+
+
+wrapper{
+  display:flex;
+  width:100%;
+  height:100%;
+}
+
+/*サイドバーメニュー*/
+
+div.sidebar{
+  width: 230px;
+  height:100%;
+  background-color: #fff;
+  margin-left: 90px;
+  margin-top: 50px;
+  background-color: #EED0C9;
+
+
+}
+
+div.sidebar ul li{
+  list-style: none;
+  line-height: 60px;
+  text-align: center;
+  border-bottom: 2px dotted #89230B;
+}
+
+div.sidebar ul li:last-child {
+  border-bottom:none;
+}
+
+div.sidebar ul li i{
+}
+
+}
+div.sidebar ul li i span{
+  left:0;
+}
+
+div.sidebar ul li a{
+  text-decoration: none;
+}
+
+/*スライドショー*/
+.slider {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    float: left;
+    margin:50px 0px 100px 150px ;
+
+
+}
+
+.slider .slider-inner {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.slider .slider-inner li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transition: all 600ms;
+    transition: all 600ms;
+    pointer-events: none
+}
+
+.slider .slider-inner li.show {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    z-index: 1;
+    pointer-events: auto
+}
+
+.slider .nav {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0
+}
+
+.slider .nav li {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    border-radius: 15px;
+    background: #ddd;
+    cursor: pointer;
+    -webkit-transition: background 400ms;
+    transition: background 400ms
+}
+
+.slider .nav li:hover {
+    background: #aaa
+}
+
+.slider .nav li.current {
+    background: #aaa
+}
+
+.slider .arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    width: 20px;
+    height: 40px;
+    background: #000;
+    color: #fff;
+    line-height: 40px;
+    padding: 5px;
+    -webkit-transition: opacity 400ms;
+    transition: opacity 400ms
+}
+
+.slider .arrow:hover {
+    opacity: .7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"
+}
+
+.slider .arrow#arrow-prev {
+    left: 0;
+    -webkit-transform: translate(-100%,-50%);
+    transform: translate(-100%,-50%)
+}
+
+.slider .arrow#arrow-next {
+    right: 0;
+    -webkit-transform: translate(100%,-50%);
+    transform: translate(100%,-50%)
+}
+
+/*タイムテーブル*/
+
+table{
+  border:1px solid #000;
+  width:calc(100%-70%);
+  margin:50px 0 30px 40px;
+}
+
+table.timetable{
+  background-color: #fff;
+  height:200px;
+  font-size:20px;
+  float:right;
+  padding-right: 20px;
+  text-align: center;
+  margin-bottom:2px;
+}
+
+th {
+  border:1px solid #000;
+
+}
+
+th.day{
+  font-weight: bold;
+  background-color: #ffd3a8;
+  color:brown;
+}
+
+th.day:last-child{
+  padding:0 30px;
+}
+
+td{
+  border:1px solid #000;
+  background-color: #ffefe0;
+}
+
+.timetable tbody tr{
+  line-height:50px;
+}
+
+.timetable tbody tr th.day{
+  text-align:center;
+  margin:0 20px;
+}
+
+ul li#holiday {
+  margin-left:40px;
+
+
+}
+
+li#access{
+  height:100px;
+  width:100px;
+  margin-left:30px;
+  float:left;
+  background-color: red;
+}
+
+.content{
+  margin:0 auto;
+}
+
+.tabwrap{
+  width:650px;
+  margin-left: 470px;
+}
+
+label.ChangeElem_Btn{
+  width:200px;
+  display:inline-block;
+  padding:14px 0 12px;
+  color:#fff;
+  background:#90c9cc;
+  text-align:center;
+  font-size:13px;
+  cursor:pointer;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  vertical-align:bottom;
+  margin:10px 5px 0;
+  transition: cubic-bezier(0, 0, 0.2, 1) .2s;
+  }
+
+  .ChangeElem_Btn:hover{
+    opacity:0.5;
+
+  }
+
+/*.ChangeElem_Btn{
+  background: #d7e9ea;
+  color: #000;
+  padding-bottom: 20px;
+  margin-top: 0;
+}*/
+
+.ChangeElem_Panel{
+  display:none;
+  background:#ffffff; border-bottom-right-radius:10px; border-bottom-left-radius:10px; border-top:8px solid #d7e9ea;
+}
+
+div.sample {
+background-color:blue; width:200px; height:50px;
+transition: background-color 1s linear 0 , width 1s linear 0 , height 1s linear 0;
+}
+
+div.sample:hover {
+background-color:aqua; width:300px; height:100px;
+}
+
+
+
+
+
+
+
+
+
