@@ -91,9 +91,10 @@ div.toplogo p#subsentence{
 
 header nav{
   float:right;
-  margin-left:30px;
+  margin-left:10px;
   padding-top:56px;
-  width:600px;
+  width:320px;
+  font-size:15px;
 }
 
 header nav ul {
@@ -153,10 +154,7 @@ div.sidebar ul li:last-child {
   border-bottom:none;
 }
 
-div.sidebar ul li i{
-}
 
-}
 div.sidebar ul li i span{
   left:0;
 }
@@ -168,8 +166,8 @@ div.sidebar ul li a{
 /*スライドショー*/
 .slider {
     position: relative;
-    width: 400px;
-    height: 600px;
+    width: 300px;
+    height: 300px;
     float: left;
     margin:50px 0px 100px 150px ;
 
@@ -182,6 +180,10 @@ div.sidebar ul li a{
     left: 0;
     width: 100%;
     height: 100%
+}
+
+li.show img{
+  width:300px;
 }
 
 .slider .slider-inner li {
@@ -265,9 +267,10 @@ div.sidebar ul li a{
 
 /*タイムテーブル*/
 
+
 table{
   border:1px solid #000;
-  width:calc(100%-70%);
+  width:400px;
   margin:50px 0 30px 40px;
 }
 
@@ -310,10 +313,8 @@ td{
   margin:0 20px;
 }
 
-ul li#holiday {
-  margin-left:40px;
-
-
+p#holiday{
+  display:inline-block;
 }
 
 li#access{
